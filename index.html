@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my-portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- loader -->
+    <div class="loader loader--style6" title="5">
+      <svg
+        version="1.1"
+        id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        width="24px"
+        height="30px"
+        viewBox="0 0 24 30"
+        style="enable-background: new 0 0 50 50"
+        xml:space="preserve"
+        class="loader__content"
+      >
+        <rect x="0" y="13" width="4" height="5" fill="#333">
+          <animate
+            attributeName="height"
+            attributeType="XML"
+            values="5;21;5"
+            begin="0s"
+            dur="0.6s"
+            repeatCount="indefinite"
+          />
+          <animate
+            attributeName="y"
+            attributeType="XML"
+            values="13; 5; 13"
+            begin="0s"
+            dur="0.6s"
+            repeatCount="indefinite"
+          />
+        </rect>
+        <rect x="10" y="13" width="4" height="5" fill="#333">
+          <animate
+            attributeName="height"
+            attributeType="XML"
+            values="5;21;5"
+            begin="0.15s"
+            dur="0.6s"
+            repeatCount="indefinite"
+          />
+          <animate
+            attributeName="y"
+            attributeType="XML"
+            values="13; 5; 13"
+            begin="0.15s"
+            dur="0.6s"
+            repeatCount="indefinite"
+          />
+        </rect>
+        <rect x="20" y="13" width="4" height="5" fill="#333">
+          <animate
+            attributeName="height"
+            attributeType="XML"
+            values="5;21;5"
+            begin="0.3s"
+            dur="0.6s"
+            repeatCount="indefinite"
+          />
+          <animate
+            attributeName="y"
+            attributeType="XML"
+            values="13; 5; 13"
+            begin="0.3s"
+            dur="0.6s"
+            repeatCount="indefinite"
+          />
+        </rect>
+      </svg>
+    </div>
+    <!-- end loader -->
+
+    <!-- navbar -->
+    <section>
+      <div class="navbar max-width">
+        <a href="#hero" class="navbar__logo">afrzl</a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skill</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+            <!-- dark-light menu -->
+            <label for="theme" class="theme dark__toggle">
+              <span class="theme__toggle-wrap dark__toggle">
+                <input
+                  id="theme"
+                  class="theme__toggle dark__toggle"
+                  type="checkbox"
+                  role="switch"
+                  name="theme"
+                  value="dark"
+                />
+                <span class="theme__fill dark__toggle"></span>
+                <span class="theme__icon dark__toggle">
+                  <span class="theme__icon-part dark__toggle"></span>
+                  <span class="theme__icon-part dark__toggle"></span>
+                  <span class="theme__icon-part dark__toggle"></span>
+                  <span class="theme__icon-part dark__toggle"></span>
+                  <span class="theme__icon-part dark__toggle"></span>
+                  <span class="theme__icon-part dark__toggle"></span>
+                  <span class="theme__icon-part dark__toggle"></span>
+                  <span class="theme__icon-part dark__toggle"></span>
+                  <span class="theme__icon-part dark__toggle"></span>
+                </span>
+              </span>
+            </label>
+          </ul>
+
+          <!--  hamburger menu -->
+          <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80">
+            <path
+              class="line top"
+              d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"
+            />
+            <path class="line middle" d="m 30,50 h 40" />
+            <path
+              class="line bottom"
+              d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"
+            />
+          </svg>
+        </nav>
+      </div>
+    </section>
+    <!-- end navbar -->
+
+    <!-- hero -->
+    <section id="hero">
+      <div class="hero max-width">
+        <div class="hero__content">
+          <div class="hero__text">
+            <h1>
+              Hi there! 👋<br />
+              i'm <span class="hero__text-name"> Afrizal Setya Pamuji</span>
+            </h1>
+            <span class="running-text hero__text__first-text"> and i'm a </span>
+            <span class="running-text hero__text__second-text"></span>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              amet quae, cum nesciunt vero itaque consequuntur quaerat delectus
+              animi cupiditate assumenda facere exercitationem omnis nisi optio
+              placeat repellendus rerum quod quidem ducimus nemo sint quibusdam.
+            </p>
+            <div class="btn btn__hire-me">
+              <a href="#contact">Hire me </a>
+              <img
+                src="./img/icons/message.svg"
+                alt="hire__icon"
+                class="hire__icon"
+              />
+            </div>
+          </div>
+          <div class="hero__img">
+            <img src="img/my-img/my-img.webp" alt="my-img" />
+            <div class="blue__gradient"></div>
+            <div class="purple__gradient"></div>
+            <div class="red__gradient"></div>
+          </div>
+        </div>
+        <div class="hero__social-media">
+          <a href="https://github.com/cuingskot76"
+            ><i class="ri-github-fill link__icon github__icon"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/afrizal-pamuji-00722a249/"
+            ><i class="ri-linkedin-fill link__icon linkedin__icon"></i
+          ></a>
+          <a href="https://www.instagram.com/cuingskot07/"
+            ><i class="ri-instagram-line link__icon instagram__icon"></i
+          ></a>
+          <a href="https://cuingskot76.showwcase.com/" class="showwcase__icon"
+            >Showwcase</a
+          >
+        </div>
+        <div class="blue__gradient__social-media"></div>
+      </div>
+    </section>
+    <!-- end hero -->
+
+    <!-- about -->
+    <section id="about">
+      <div class="about-me max-width">
+        <div class="about-me__intro intro">
+          <h1>About Me</h1>
+          <span class="intro__span">My introduction</span>
+        </div>
+        <div class="about-me__hero">
+          <div class="about-me__hero-img">
+            <img src="./img/my-img/about-me.png" alt="about-me" />
+          </div>
+          <div class="green__gradient"></div>
+          <div class="about-me__data">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Exercitationem sequi a id deleniti expedita officia ipsa corrupti
+              numquam fugit illo nisi, aliquid harum provident dolorum?
+            </p>
+            <div class="about-me__data-info">
+              <h3>05+</h3>
+              <span class="second__color about-me__ex"
+                >Years <br />
+                experience</span
+              >
+            </div>
+            <div class="about-me__data-info">
+              <h3>47+</h3>
+              <span class="second__color about-me__ex"
+                >Completed <br />
+                project</span
+              >
+            </div>
+            <div class="about-me__data-info">
+              <h3>05+</h3>
+              <span class="second__color about-me__ex"
+                >Company <br />
+                worked</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="blue__gradient-5"></div>
+      </div>
+    </section>
+    <!-- end about -->
+
+    <!-- skills -->
+    <section id="skills">
+      <div class="skills max-width">
+        <div class="skills__intro intro">
+          <h1>My Skills</h1>
+          <span class="intro__span">My technical level</span>
+        </div>
+        <div class="skills__fe">
+          <div class="skills__title">Frontend</div>
+          <div class="skills__content">
+            <div class="skills__body-rounded">
+              <img src="./img/skills-img/html.png" alt="html-img" />
+            </div>
+            <div class="skills__body-rounded">
+              <img src="./img/skills-img/css.png" alt="css-img" />
+            </div>
+            <div class="skills__body-rounded">
+              <img src="./img/skills-img/javascript.png" alt="js-img" />
+            </div>
+            <div class="skills__body-rounded">
+              <img src="./img/skills-img/react.png" alt="react-img" />
+            </div>
+            <div class="skills__body-rounded">
+              <img src="./img/skills-img/tailwind.svg" alt="tailwind.svg-img" />
+            </div>
+            <div class="skills__body-rounded">
+              <img
+                src="./img/skills-img/bootstrap.png"
+                alt="bootstrap.png-img"
+              />
+            </div>
+            <div class="skills__body-rounded">
+              <img src="./img/skills-img/sass.png" alt="sass.png-img" />
+            </div>
+          </div>
+        </div>
+        <div class="skills__be">
+          <div class="skills__title">Backend</div>
+          <div class="skills__content">
+            <div class="skills__body-rounded">
+              <img src="./img/skills-img/nodejs.svg" alt="nodejs-img" />
+            </div>
+            <div class="skills__body-rounded">
+              <img src="./img/skills-img/mysql.png" alt="mysql-img" />
+            </div>
+          </div>
+        </div>
+        <div class="skills__desain">
+          <div class="skills__title">Desain</div>
+          <div class="skills__content">
+            <div class="skills__body-rounded">
+              <img src="./img/skills-img/figma.svg" alt="figma-img" />
+            </div>
+            <div class="skills__body-rounded">
+              <img src="./img/skills-img/adobe.svg" alt="ps-img" />
+            </div>
+            <div class="skills__body-rounded">
+              <img src="./img/skills-img/coreldraw.png" alt="coreldraw-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end skills -->
+
+    <!-- service -->
+    <section id="service">
+      <div class="service max-width">
+        <div class="service__intro intro">
+          <h1>My Service</h1>
+          <span class="intro__span">What i can do for you</span>
+        </div>
+        <div class="service__content">
+          <div class="service__card">
+            <div class="service__card-img">
+              <img src="./img/services-img/frontend.webp" alt="frontend-img" />
+            </div>
+            <h3 class="service__card-title">Frontend Developer</h3>
+            <div class="service__card-desc second__color">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur placeat minima quaerat similique itaque amet, ea ipsum
+              facilis corrupti accusamus.
+            </div>
+          </div>
+          <div class="service__card">
+            <div class="service__card-img">
+              <img src="./img/services-img/backend.webp" alt="backend-img" />
+            </div>
+            <h3 class="service__card-title">Backend Developer</h3>
+            <div class="service__card-desc second__color">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+              accusamus voluptates laudantium cum, molestias recusandae non
+              asperiores beatae repellat impedit?
+            </div>
+          </div>
+          <div class="service__card">
+            <div class="service__card-img">
+              <img src="./img/services-img/design.webp" alt="design-img" />
+            </div>
+            <h3 class="service__card-title">Web Design</h3>
+            <div class="service__card-desc second__color">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut in
+              accusantium quisquam amet minima sed fugit expedita aliquam
+              similique modi!
+            </div>
+          </div>
+        </div>
+        <div class="pink__gradient-2"></div>
+      </div>
+    </section>
+    <!-- end service -->
+
+    <!-- gallery -->
+    <section id="gallery">
+      <div class="gallery max-width">
+        <div class="gallery__intro intro">
+          <h1>My Gallery</h1>
+          <span class="intro__span">Some of my works</span>
+        </div>
+        <div class="gallery__content">
+          <div class="gallery__content-card">
+            <div class="gallery__content-card-img">
+              <img
+                src="./img/gallery-img/Bookshelf-Apps.webp"
+                alt="Bookshelf-App-img"
+              />
+            </div>
+            <div class="gallery__content-card-desc">
+              <h3>Bookshelf App</h3>
+              <span class="second__color"
+                >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Tempore, unde? Perferendis fuga sit unde optio.</span
+              >
+            </div>
+            <div class="gallery__content-card-tech">
+              <div class="card-tech__body">
+                <img src="./img/skills-img/html.png" alt="html" />
+                <img src="./img/skills-img/css.png" alt="css" />
+                <img src="./img/skills-img/javascript.png" alt="javascript" />
+              </div>
+            </div>
+          </div>
+          <div class="gallery__content-card">
+            <div class="gallery__content-card-img">
+              <img
+                src="./img/gallery-img/Landing-Page.webp"
+                alt="landing-page-img"
+              />
+            </div>
+            <div class="gallery__content-card-desc">
+              <h3>Company Profile</h3>
+              <span class="second__color"
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aliquid, ipsa nihil. Ratione quibusdam dicta molestias!</span
+              >
+            </div>
+            <div class="gallery__content-card-tech">
+              <div class="card-tech__body">
+                <img src="./img/skills-img/bootstrap.png" alt="bootstrap" />
+              </div>
+            </div>
+          </div>
+          <div class="gallery__content-card">
+            <div class="gallery__content-card-img">
+              <img
+                src="./img/gallery-img/Weather-App.webp"
+                alt="weater-app-img"
+              />
+            </div>
+            <div class="gallery__content-card-desc">
+              <h3>Weather App</h3>
+              <span class="second__color"
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Atque, temporibus! Iste, nemo tempore. Explicabo, numquam.</span
+              >
+            </div>
+            <div class="gallery__content-card-tech">
+              <div class="card-tech__body">
+                <img src="./img/skills-img/tailwind.svg" alt="tailwind" />
+                <img src="./img/skills-img/react.png" alt="react" />
+              </div>
+            </div>
+          </div>
+          <div class="gallery__content-card">
+            <div class="gallery__content-card-img">
+              <img
+                src="./img/gallery-img/Pink-Light.webp"
+                alt="pink-light-img"
+              />
+            </div>
+            <div class="gallery__content-card-desc">
+              <h3>Pinklight</h3>
+              <span class="second__color"
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                rerum dolor fuga, facere harum saepe!</span
+              >
+            </div>
+            <div class="gallery__content-card-tech">
+              <div class="card-tech__body">
+                <img src="./img/skills-img/bootstrap.png" alt="bootstrap" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="blue__gradient-2"></div>
+      </div>
+    </section>
+    <!-- end gallery -->
+
+    <!-- testimonial -->
+    <section id="testimonial">
+      <div class="testimonial max-width">
+        <div class="testimonial__intro">
+          <div class="testimonial__intro-text">
+            <h1>Testimonials</h1>
+            <span class="intro__span">What my clients say</span>
+          </div>
+          <div class="testimonial__arrow">
+            <div class="testimonial__arrow-left">
+              <i class="ri-arrow-left-line"></i>
+            </div>
+            <div class="testimonial__arrow-right">
+              <i class="ri-arrow-right-line"></i>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial__content">
+          <div class="testimonial__content-card active">
+            <div class="testimonial__content-card-img">
+              <img src="./img/testimonials-img/mark.webp" alt="mark-img" />
+            </div>
+            <div class="testimonial__content-card-desc">
+              <p class="second__color">Businessman</p>
+              <h3>John Doe</h3>
+              <span class="second__color"
+                >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Provident officiis cumque earum non iusto dolorem magni impedit
+                suscipit odit ea, similique sequi illo autem placeat ducimus
+                quibusdam aperiam, quo exercitationem rem aliquid iure vel
+                repellat. Quibusdam consequuntur natus nam cum.</span
+              >
+            </div>
+          </div>
+          <div class="testimonial__content-card">
+            <div class="testimonial__content-card-img">
+              <img src="./img/testimonials-img/erik.webp" alt="erik-img" />
+            </div>
+            <div class="testimonial__content-card-desc">
+              <p class="second__color">Student</p>
+              <h3>Erik Lucatero</h3>
+              <span class="second__color"
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Officiis ullam labore iusto voluptate aspernatur incidunt nobis
+                cupiditate perspiciatis beatae voluptas cumque, et quam aperiam
+                impedit repellendus quis molestias iure quidem dolorum cum hic
+                maxime rerum temporibus! Odit ad nesciunt sit?</span
+              >
+            </div>
+          </div>
+          <div class="testimonial__content-card">
+            <div class="testimonial__content-card-img">
+              <img
+                src="./img/testimonials-img/patrik-velich.webp"
+                alt="patrik-img"
+              />
+            </div>
+            <div class="testimonial__content-card-desc">
+              <p class="second__color">Blogger</p>
+              <h3>Angela Vas</h3>
+              <span class="second__color"
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Delectus debitis sunt nesciunt totam nulla minima incidunt
+                eveniet veniam aspernatur repudiandae voluptatem quis id ratione
+                rem eum, exercitationem molestiae repellendus aliquam!</span
+              >
+            </div>
+          </div>
+          <div class="testimonial__content-card">
+            <div class="testimonial__content-card-img">
+              <img
+                src="./img/testimonials-img/charlie.webp"
+                alt="charlie-img"
+              />
+            </div>
+            <div class="testimonial__content-card-desc">
+              <p class="second__color">Copywriting</p>
+              <h3>Charlie</h3>
+              <span class="second__color"
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Tempore placeat dolorem nostrum beatae officiis laborum
+                recusandae rerum perspiciatis aliquid. Culpa nobis, obcaecati
+                fuga, sit quisquam nam optio quo nostrum dolor error, commodi
+                soluta possimus ut. Eos atque numquam mollitia sit.</span
+              >
+            </div>
+          </div>
+          <div class="testimonial__content-card">
+            <div class="testimonial__content-card-img">
+              <img src="./img/testimonials-img/ayana.webp" alt="ayana-img" />
+            </div>
+            <div class="testimonial__content-card-desc">
+              <p class="second__color">Frontend</p>
+              <h3>Ayanna</h3>
+              <span class="second__color"
+                >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
+                accusamus id culpa! Autem, quibusdam facilis recusandae amet
+                obcaecati inventore repudiandae maxime adipisci? Placeat
+                corrupti at numquam quaerat ratione debitis praesentium
+                veritatis quia. Recusandae, qui provident?</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="indicators">
+          <button class="active"></button>
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+        <div class="blue__gradient-3"></div>
+      </div>
+    </section>
+    <!-- end testimonial -->
+
+    <!-- contact -->
+    <section id="contact">
+      <div class="contact max-width">
+        <div class="contact__intro intro">
+          <h1>Contact</h1>
+          <span class="intro__span">Get in touch</span>
+        </div>
+        <div class="contact__content">
+          <div class="contact__content-left">
+            <h3>Let's talk about everything</h3>
+            <p class="second__color">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut a
+              alias aspernatur facere repellat voluptate ullam, accusamus quia
+              soluta quasi hic, rerum amet. Nobis minus est laboriosam unde sint
+              pariatur!
+            </p>
+            <img src="./img/contact-img/contact.svg" alt="contact-img" />
+          </div>
+          <div class="contact__content-right">
+            <form class="form">
+              <div class="form__group">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  required
+                  class="form__input form__name"
+                />
+              </div>
+              <div class="form__group">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  required
+                  class="form__input form__email"
+                />
+              </div>
+              <div class="form__group">
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  required
+                  class="form__input form__subject"
+                />
+              </div>
+              <div class="form__group">
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="5"
+                  required
+                  placeholder="Message"
+                  class="form__input form__message"
+                ></textarea>
+              </div>
+              <a href="#hero" class="btn btn-contact">Submit</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end contact -->
+
+    <!-- footer -->
+    <footer id="footer">
+      <div class="footer max-width">
+        <div class="footer__content intro">
+          <span
+            >Created with <i class="ri-heart-fill heart"></i> and
+            <i class="ri-cup-fill cup"></i> by <strong> Afrizal Setya </strong>.
+            All right reserved
+          </span>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+  </body>
+  <!-- script -->
+  <script src="script.js"></script>
+  <!-- icon -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+</html>
