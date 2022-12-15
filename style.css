@@ -191,13 +191,14 @@ body.dark .loader svg rect {
 body {
   background-color: var(--background);
   color: var(--font-color__default-main__dark);
-  overflow-x: hidden;
   position: relative;
   font-size: var(--font-size__1);
+  overflow-x: hidden;
 }
 
 html {
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 img {
