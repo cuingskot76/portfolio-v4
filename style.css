@@ -10,26 +10,26 @@
 
 :root {
   /* font color */
-  --font-color__default-main__dark: #222831;
+  /* --font-color__default-main__dark: #222831;
   --font-color__default-second__dark: #797a7e;
   --font-color__running-text: salmon;
-  --font-color__button-background: #add8e6;
+  --font-color__button-background: #add8e6; */
   /* font size */
-  --font-size__1: 1rem;
+  /* --font-size__1: 1rem;
   --font-size__2: 1.1rem;
   --font-size__3: 1.5rem;
   --font-size__4: 2rem;
-  --font-size__5: 2.5rem;
+  --font-size__5: 2.5rem; */
   --font-size__link__icon: 2rem;
   --fonst-size__logo-nav: 1.5rem;
   /* background color */
-  --background: #eeeeee;
+  /* --background: #eeeeee;
   --background__navbar: #d2daff;
   --background__social-media: #f6f6f6;
   --background__card: rgb(251, 247, 240, 0.7);
   --background__card-gallery: #fff;
   --background__card-container: #f6f5f5;
-  --background__card-social-media: rgb(251, 251, 251, 0.4);
+  --background__card-social-media: rgb(251, 251, 251, 0.4); */
   /* icon */
   --hamburger-menu__icon: #41444b;
   --hamburger-menu__icon__active: crimson;
@@ -97,20 +97,6 @@ body.dark .hero__text-name {
   background-clip: text;
   font-weight: bold;
 }
-body.dark .blue__gradient__social-media {
-  background-image: radial-gradient(
-    circle farthest-corner at 83.7% 4.3%,
-    rgba(173, 0, 171, 1) 0%,
-    rgba(15, 51, 92, 1) 90%
-  );
-  height: 20%;
-  width: 10%;
-  bottom: -4rem;
-  border-radius: 50px;
-  left: 0;
-  z-index: -10;
-  filter: blur(100px);
-}
 body.dark .green__gradient {
   height: 30%;
   width: 40%;
@@ -128,14 +114,14 @@ body.dark .green__gradient {
 body.dark .pink__gradient-2 {
   height: 50%;
   width: 30%;
-  top: 20%;
-  right: 0;
+  bottom: 20%;
+  right: -30%;
   background-image: radial-gradient(
-    circle 590px at 8.2% 13.8%,
-    rgba(18, 35, 60, 1) 0%,
-    #bbb 90%
+    circle 757px at 14.6% 44.8%,
+    rgba(60, 77, 115, 1) 27.7%,
+    rgba(0, 194, 209, 1) 95.9%
   );
-  filter: blur(200px);
+  filter: blur(100px);
   position: absolute;
 }
 body.dark .blue__gradient-2 {
@@ -192,10 +178,13 @@ body {
   background-color: var(--background);
   color: var(--font-color__default-main__dark);
   position: relative;
-  font-size: var(--font-size__1);
-  overflow-x: hidden;
+  /* font-size: var(--font-size__1); */
+  /* overflow-x: hidden; */
 }
-
+.hero {
+  min-height: 100vh;
+  /* background-color: lightblue; */
+}
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -261,6 +250,20 @@ svg rect {
   position: absolute;
   display: none;
 }
+.blue__gradient-10 {
+  height: 50%;
+  width: 80%;
+  top: 30%;
+  right: -30%;
+  z-index: -1;
+  background-image: radial-gradient(
+    circle farthest-corner at 16.5% 28.1%,
+    rgba(15, 27, 49, 1) 0%,
+    rgba(0, 112, 218, 1) 90%
+  );
+  filter: blur(150px);
+  position: absolute;
+}
 /* .blue__gradient-3 {
   height: 70%;
   width: 80%;
@@ -305,22 +308,27 @@ svg rect {
 .blue__gradient-5 {
   height: 80%;
   width: 80%;
-  top: -4rem;
+  left: -70%;
   z-index: -1;
-  background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+  /* background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%); */
+  background-image: radial-gradient(
+    circle 674px at 18.3% 77%,
+    rgba(139, 186, 244, 1) 3.4%,
+    rgba(15, 51, 92, 1) 56.6%
+  );
   filter: blur(50px);
   position: absolute;
 }
-.pink__gradient-2 {
+/* .pink__gradient-2 {
   height: 70%;
   width: 50%;
   top: 20%;
   left: 0;
   z-index: -1;
-  background-image: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);
+  background-color: salmon;
   filter: blur(300px);
   position: absolute;
-}
+} */
 .red__gradient {
   height: 30%;
   width: 50%;
@@ -665,6 +673,7 @@ nav ul li a.active {
   flex-wrap: wrap;
   padding: 1rem;
   z-index: 9;
+  gap: 1rem;
   color: var(--font-color__default-second);
 }
 .hero__social-media a {
@@ -691,7 +700,7 @@ nav ul li a.active {
 .showwcase__icon:hover {
   color: var(--font-color__default-second__dark);
 }
-.blue__gradient__social-media {
+/* .blue__gradient__social-media {
   height: 20%;
   width: 60%;
   bottom: -4rem;
@@ -705,7 +714,7 @@ nav ul li a.active {
   );
   filter: blur(80px);
   position: absolute;
-}
+} */
 
 .btn {
   display: flex;
@@ -828,6 +837,11 @@ nav ul li a.active {
 /* * Skills */
 .skills {
   position: relative;
+}
+.skills__intro,
+.service__intro,
+.gallery__intro {
+  margin-top: 6rem;
 }
 .skills__content {
   display: flex;
@@ -955,7 +969,8 @@ nav ul li a.active {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 2rem 0;
+  /* margin: 2rem 0; */
+  margin: 6rem 0;
 }
 .testimonial__arrow {
   /* position: absolute;
@@ -1089,7 +1104,7 @@ button.active {
 .heart,
 .cup {
   color: var(--love__color);
-  font-size: var(--font-size__3);
+  font-size: var(--font-size__2);
   margin: 0 0.2rem;
 }
 .cup {
@@ -1347,7 +1362,7 @@ button.active {
   .contact__content-left img {
     width: 350px;
   }
-  body.dark .pink__gradient-2 {
+  /* body.dark .pink__gradient-2 {
     height: 20%;
     width: 20%;
     top: 20%;
@@ -1359,7 +1374,7 @@ button.active {
     );
     filter: blur(200px);
     position: absolute;
-  }
+  } */
 }
 
 /* ! extra large device */
@@ -1392,7 +1407,7 @@ button.active {
     position: relative;
     margin-top: 5rem;
   }
-  .blue__gradient__social-media {
+  /* .blue__gradient__social-media {
     height: 20%;
     width: 60%;
     bottom: -4rem;
@@ -1406,8 +1421,8 @@ button.active {
     );
     filter: blur(200px);
     position: absolute;
-  }
-  .pink__gradient-2 {
+  } */
+  /* .pink__gradient-2 {
     height: 70%;
     width: 50%;
     top: 20%;
@@ -1416,5 +1431,5 @@ button.active {
     background-image: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);
     filter: blur(400px);
     position: absolute;
-  }
+  } */
 }
