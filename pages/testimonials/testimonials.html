@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../style.css" />
-    <title>Document</title>
+    <title>portfolio | Afrizal</title>
   </head>
   <body class="dark">
     <!-- navbar -->
@@ -15,12 +15,12 @@
         <nav>
           <ul class="nav-links">
             <li><a href="../../index.html">Home</a></li>
-            <li><a href="#" class="active">Biodata</a></li>
+            <li><a href="../biodata/biodata.html">Biodata</a></li>
             <li><a href="../skills/skills.html">Skill</a></li>
             <li><a href="../services/services.html">Service</a></li>
             <li><a href="../gallery/gallery.html">Gallery</a></li>
             <li><a href="../contact/contact.html">Contact</a></li>
-            <li><a href="../testimonials/testimonials.html">Javascript</a></li>
+            <li><a href="#" class="active">Javascript</a></li>
           </ul>
 
           <!--  hamburger menu -->
@@ -165,6 +165,72 @@
     rel="stylesheet"
   />
   <script>
+    // hamburger menu
+    const hamburger = document.querySelector(".ham");
+    const navLinks = document.querySelector(".nav-links");
+    const linksList = document.querySelectorAll(".nav-links li");
+    const linksListA = document.querySelectorAll(".nav-links li a");
+    const hamburgerLines = document.querySelectorAll(".ham .line");
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      hamburgerLines.forEach((line) => {
+        line.classList.toggle("active");
+      });
+
+      navLinks.classList.toggle("open");
+
+      linksList.forEach((link) => {
+        link.classList.toggle("fade");
+
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("open");
+          hamburger.classList.remove("active");
+          hamburgerLines.forEach((line) => {
+            line.classList.remove("active");
+          });
+          linksList.forEach((link) => {
+            link.classList.remove("fade");
+          });
+        });
+      });
+
+      // remove active class when user click oustside nav
+      window.addEventListener("click", function (e) {
+        if (e.target !== navLinks && e.target !== hamburger) {
+          navLinks.classList.remove("open");
+          hamburger.classList.remove("active");
+          hamburgerLines.forEach((line) => {
+            line.classList.remove("active");
+          });
+          linksList.forEach((link) => {
+            link.classList.remove("fade");
+          });
+        }
+      });
+    });
+
+    // toggle active link
+    linksListA.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        linksListA.forEach((link) => link.classList.remove("active"));
+        link.classList.toggle("active");
+      });
+    });
+
+    // navbar scroll
+    const nav = document.querySelector(".navbar");
+    const navHeight = nav.getBoundingClientRect().height;
+
+    window.addEventListener("scroll", () => {
+      const scrollHeight = window.pageYOffset;
+      if (scrollHeight > navHeight) {
+        nav.classList.add("fixed");
+      } else {
+        nav.classList.remove("fixed");
+      }
+    });
+
     // testimonials slider
     const indicators = document.querySelectorAll(".indicators button");
     const card = document.querySelectorAll(".testimonial__content-card");
@@ -231,4 +297,9 @@
       card[currentActive].classList.add("active");
     }, 7000);
   </script>
+  <!-- icon -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
 </html>
